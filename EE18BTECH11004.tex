@@ -115,7 +115,16 @@ columns=fullflexible
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/Siddhu27/ee3025_ass1/tree/main/codes
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/Siddhu27/ee3025_ass1
+\end{lstlisting}
 (5.3) The system with h(n) is defined to be stable if 
 \begin{align}
 \sum_{n=-\infty}^{\infty} \abs{h(n)} < \infty
@@ -149,7 +158,6 @@ Given difference equation:
 y(n)+\frac{1}{2}y(n-1) = x(n)+x(n-2) \\
 y(n)=0 \text{ for }y<0
 \end{align}\\
-\newpage
 and the given bounded input is \\
 \begin{align}
 x(n) = \cbrak{1,1,2,4,3,1}
@@ -163,13 +171,12 @@ x(n) = \cbrak{1,1,2,4,3,1}
 and the output we get,\\
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=8cm]{./figures/OUTPUT.eps}
+    \includegraphics[width=7cm]{./figures/OUTPUT.eps}
     \caption{Bounded output}
     \label{yn}
 \end{figure} \\
 So we can see that we are getting bounded output for the bounded input.Therefore,
 the given system is stable.\\
-\newpage
 \textbf{Method 2 :}
 \\
 Given difference equation,
@@ -199,13 +206,13 @@ As the condition for the system to be stable is
 \end{align}\\
 By substituting h(n) we get,\\
 \begin{align}
-\sum_{n=-\infty}^{\infty} \abs{h(n)} &= \sum_{n=-\infty}^{\infty}\abs{\sbrak{\frac{-1}{2}}^nu(n) + \sbrak{\frac{-1}{2}}^{n-2}u(n-2)}  \\
+\sum_{n=-\infty}^{\infty} \abs{h(n)} &= \sum_{n=-\infty}^{\infty}\abs{\sbrak{\frac{-1}{2}}^nu(n) + \sbrak{\frac{-1}{2}}^{n-2}u(n-2)}
+\end{align}
+\begin{align}
 &= 
 \sum_{n=-\infty}^{\infty}\abs{(-1)^n \left( \sbrak{\frac{-1}{2}}^nu(n) + \sbrak{\frac{-1}{2}}^{n-2}u(n-2) \right)}  \\
 &= 
-\sum_{n=-\infty}^{\infty}\abs{\sbrak{\frac{1}{2}}^nu(n) + \sbrak{\frac{1}{2}}^{n-2}u(n-2)} 
-\end{align}
-\begin{align}
+\sum_{n=-\infty}^{\infty}\abs{\sbrak{\frac{1}{2}}^nu(n) + \sbrak{\frac{1}{2}}^{n-2}u(n-2)} \\
 &=
 \sum_{n=-\infty}^{\infty}\sbrak{\frac{1}{2}}^nu(n)+\sum_{n=-\infty}^{\infty}\sbrak{\frac{1}{2}}^{n-2}u(n-2)\\
 &=
@@ -238,7 +245,6 @@ From triangle inequality,
      \therefore \abs{H(z)}_{\abs{z}=1}<\infty
 \end{align}
 For the system to be stable unit circle should lie in the ROC of the system.\\
-\\
 From the equation 1.0.15,
 \begin{align}
 H(z) &= z^{-1}\sbrak{\frac{1}{1+\frac{1}{2}z^{-1}} + \frac{z^{-2}}{1+\frac{1}{2}z^{-1}}}\\
@@ -251,7 +257,7 @@ The above expansion is infinite G.P, so the summation is finite if $z\neq0$ and\
 \end{align}\\
 From the equation 1.0.33 ROC of the system consists the unit circle.Thus, the given system is stable.\\
 \\
-Below plot is ROC of the given system,\\
+Verification through z-plane,\\
 \begin{figure}[h!]
     \centering
     \includegraphics[width=8cm]{./figures/ROC.eps}
